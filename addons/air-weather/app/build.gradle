@@ -1,0 +1,46 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'tv.home.airweather'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId 'tv.home.airweather'
+        minSdk 26
+        targetSdk 34
+        versionCode 1
+        versionName '1.0'
+    }
+
+    signingConfigs {
+        // One fixed key for every CI build, so each new APK installs over the last one.
+        tvhome {
+            storeFile rootProject.file('../../keystore/tvhome.jks')
+            storePassword 'tvhome-chomthong'
+            keyAlias 'tvhome'
+            keyPassword 'tvhome-chomthong'
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt')
+            // Sideloaded over ADB like the launcher: signed with the debug key. Sign your own releases with your key.
+            signingConfig signingConfigs.tvhome
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}
+
+dependencies {
+    // Test only (never in the APK): plain JVM tests for the PM2.5 bands and the station distance, src/test.
+    testImplementation 'junit:junit:4.13.2'
+}

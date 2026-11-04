@@ -1,0 +1,63 @@
+name: Build APKs
+
+on:
+  push:
+    branches: [main]
+    paths: ["launcher/**", "addons/air-weather/**", ".github/workflows/build.yml"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+      - uses: android-actions/setup-android@v3
+        with:
+          packages: platforms;android-34 build-tools;34.0.0
+      - uses: gradle/actions/setup-gradle@v4
+
+      - name: Launcher
+        working-directory: launcher
+        run: |
+          chmod +x gradlew
+          ./gradlew assembleRelease --console=plain
+
+      - name: Air & Weather add-on
+        working-directory: addons/air-weather
+        run: |
+          chmod +x gradlew
+          ./gradlew assembleRelease --console=plain
+
+      - name: Collect
+        run: |
+          mkdir -p out
+          cp launcher/app/build/outputs/apk/release/app-release.apk out/tvhome-launcher.apk
+          cp addons/air-weather/app/build/outputs/apk/release/app-release.apk out/air-weather.apk
+          ( cd out && sha256sum *.apk > SHA256SUMS.txt && ls -la )
+          echo "${GITHUB_SHA}" > out/COMMIT.txt
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: apks
+          path: out/
+
+      - name: Publish to the apk branch
+        run: |
+          cd out
+          git init -q -b apk
+          git config user.name "github-actions"
+          git config user.email "github-actions@users.noreply.github.com"
+          git add .
+          git commit -q -m "APKs for ${GITHUB_SHA}"
+          git push -f "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git" apk

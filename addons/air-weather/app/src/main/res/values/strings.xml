@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Weather</string>
+
+    <string name="feels_like">Feels like %1$d° · Humidity %2$d%%</string>
+    <string name="feels_short">Feels like %1$d°</string>
+    <string name="rain_chance">Rain %1$d%%</string>
+    <string name="rain_likely">likely at %1$s (%2$d%%)</string>
+    <string name="rain_now">Raining now</string>
+    <string name="storm_now">Thunderstorm now</string>
+    <string name="mask">Don\'t forget to wear a mask</string>
+    <string name="days_title">Next days · rain · PM2.5</string>
+    <string name="today">Today</string>
+    <string name="effects_on">Home sky &amp; haze: On</string>
+    <string name="effects_off">Home sky &amp; haze: Off</string>
+    <string name="mask_on">Mask reminder: On</string>
+    <string name="mask_off">Mask reminder: Off</string>
+    <string name="pm_line">PM2.5 %1$d %2$s</string>
+    <string name="pm_pill">PM2.5 %1$s µg/m³ · %2$s</string>
+    <string name="pm_station">Measured at %1$s, %2$s · Air4Thai</string>
+    <string name="pm_model">Model estimate (CAMS): no Air4Thai station within 50 km</string>
+    <string name="pm_none">PM2.5 unavailable right now</string>
+    <string name="hours_title">Next hours · rain chance · PM2.5 forecast (model)</string>
+    <string name="hours_title_adjusted">Next hours · rain chance · PM2.5 forecast (model, matched to the station)</string>
+    <string name="place_auto">Automatic · from this network</string>
+    <string name="place_manual">Chosen location</string>
+    <string name="updated">Updated %1$s · Open-Meteo · Air4Thai</string>
+    <string name="change_place">Change location</string>
+    <string name="use_auto">Use automatic location</string>
+    <string name="loading">Loading the weather…</string>
+    <string name="offline">Can\'t reach the weather service. Check the TV\'s internet connection; it tries again in 5 minutes.</string>
+    <string name="no_auto">Couldn\'t tell where this network is. Choose a location.</string>
+
+    <string name="pick_title">Which place?</string>
+    <string name="pick_hint">City or district, e.g. Chiang Mai</string>
+    <string name="pick_search">Search</string>
+    <string name="pick_none">No place called \"%1$s\"</string>
+
+    <string name="pm_very_good">Very good</string>
+    <string name="pm_good">Good</string>
+    <string name="pm_moderate">Moderate</string>
+    <string name="pm_sensitive">Starting to affect health</string>
+    <string name="pm_unhealthy">Affects health</string>
+
+    <string name="sky_clear">Clear</string>
+    <string name="sky_sunny">Sunny</string>
+    <string name="sky_mostly_clear">Mostly clear</string>
+    <string name="sky_mostly_sunny">Mostly sunny</string>
+    <string name="sky_partly_cloudy">Partly cloudy</string>
+    <string name="sky_cloudy">Cloudy</string>
+    <string name="sky_fog">Fog</string>
+    <string name="sky_drizzle">Drizzle</string>
+    <string name="sky_light_rain">Light rain</string>
+    <string name="sky_rain">Rain</string>
+    <string name="sky_heavy_rain">Heavy rain</string>
+    <string name="sky_snow">Snow</string>
+    <string name="sky_showers">Showers</string>
+    <string name="sky_thunderstorm">Thunderstorm</string>
+</resources>

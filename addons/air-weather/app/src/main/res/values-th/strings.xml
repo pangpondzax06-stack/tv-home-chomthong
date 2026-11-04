@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Weather</string>
+
+    <string name="feels_like">รู้สึกเหมือน %1$d° · ความชื้น %2$d%%</string>
+    <string name="feels_short">รู้สึกเหมือน %1$d°</string>
+    <string name="rain_chance">ฝน %1$d%%</string>
+    <string name="rain_likely">น่าจะตกเวลา %1$s น. (%2$d%%)</string>
+    <string name="rain_now">ฝนกำลังตก</string>
+    <string name="storm_now">พายุฝนฟ้าคะนอง</string>
+    <string name="mask">อย่าลืมใส่หน้ากากอนามัย</string>
+    <string name="days_title">วันถัดไป · ฝน · PM2.5</string>
+    <string name="today">วันนี้</string>
+    <string name="effects_on">ท้องฟ้าและหมอกฝุ่นบนหน้า Home: เปิด</string>
+    <string name="effects_off">ท้องฟ้าและหมอกฝุ่นบนหน้า Home: ปิด</string>
+    <string name="mask_on">เตือนใส่หน้ากาก: เปิด</string>
+    <string name="mask_off">เตือนใส่หน้ากาก: ปิด</string>
+    <string name="pm_line">PM2.5 %1$d %2$s</string>
+    <string name="pm_pill">PM2.5 %1$s มคก./ลบ.ม. · %2$s</string>
+    <string name="pm_station">วัดที่ %1$s เวลา %2$s น. · Air4Thai</string>
+    <string name="pm_model">ค่าประมาณจากแบบจำลอง (CAMS): ไม่มีสถานี Air4Thai ในระยะ 50 กม.</string>
+    <string name="pm_none">ยังไม่มีค่า PM2.5 ในตอนนี้</string>
+    <string name="hours_title">ชั่วโมงถัดไป · โอกาสฝนตก · พยากรณ์ PM2.5 (แบบจำลอง)</string>
+    <string name="hours_title_adjusted">ชั่วโมงถัดไป · โอกาสฝนตก · พยากรณ์ PM2.5 (แบบจำลอง ปรับตามสถานีวัด)</string>
+    <string name="place_auto">อัตโนมัติ · ตามเครือข่ายนี้</string>
+    <string name="place_manual">ตำแหน่งที่เลือกเอง</string>
+    <string name="updated">อัปเดต %1$s · Open-Meteo · Air4Thai</string>
+    <string name="change_place">เปลี่ยนตำแหน่ง</string>
+    <string name="use_auto">ใช้ตำแหน่งอัตโนมัติ</string>
+    <string name="loading">กำลังโหลดสภาพอากาศ…</string>
+    <string name="offline">เชื่อมต่อบริการสภาพอากาศไม่ได้ ตรวจสอบอินเทอร์เน็ตของทีวี จะลองใหม่ใน 5 นาที</string>
+    <string name="no_auto">หาตำแหน่งของเครือข่ายนี้ไม่ได้ เลือกตำแหน่งเอง</string>
+
+    <string name="pick_title">ตำแหน่งไหน?</string>
+    <string name="pick_hint">จังหวัดหรือเขต เช่น เชียงใหม่</string>
+    <string name="pick_search">ค้นหา</string>
+    <string name="pick_none">ไม่พบตำแหน่ง \"%1$s\"</string>
+
+    <string name="pm_very_good">ดีมาก</string>
+    <string name="pm_good">ดี</string>
+    <string name="pm_moderate">ปานกลาง</string>
+    <string name="pm_sensitive">เริ่มมีผลต่อสุขภาพ</string>
+    <string name="pm_unhealthy">มีผลต่อสุขภาพ</string>
+
+    <string name="sky_clear">ท้องฟ้าแจ่มใส</string>
+    <string name="sky_sunny">แดดออก</string>
+    <string name="sky_mostly_clear">ค่อนข้างแจ่มใส</string>
+    <string name="sky_mostly_sunny">แดดเป็นส่วนใหญ่</string>
+    <string name="sky_partly_cloudy">มีเมฆบางส่วน</string>
+    <string name="sky_cloudy">เมฆมาก</string>
+    <string name="sky_fog">หมอก</string>
+    <string name="sky_drizzle">ฝนปรอย</string>
+    <string name="sky_light_rain">ฝนเล็กน้อย</string>
+    <string name="sky_rain">ฝนตก</string>
+    <string name="sky_heavy_rain">ฝนตกหนัก</string>
+    <string name="sky_snow">หิมะ</string>
+    <string name="sky_showers">ฝนตกเป็นช่วง</string>
+    <string name="sky_thunderstorm">พายุฝนฟ้าคะนอง</string>
+</resources>
